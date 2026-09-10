@@ -1,0 +1,12 @@
+def decorator(f):
+    def exec_f(x, y):
+        return f(x, y)
+    return exec_f
+
+
+@decorator
+def soma(x, y):
+    return x + y
+
+soma_1e4 = soma(1,4)
+print(soma_1e4)

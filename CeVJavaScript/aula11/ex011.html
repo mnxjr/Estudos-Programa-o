@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+    <style>
+        body {
+            background: rgb(62, 61, 139);
+            font: normal 19pt Arial;
+            color: white;
+            margin: 30px;
+        }
+        p {
+            font-family: "helvetica neue", helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgb(255, 255, 255);
+            background: rgba(0, 0, 200, 0.3);
+            color: rgb(255, 255, 255);
+            box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>   >Teste de nacionalidade<</h1>
+    O país em que você vive:
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <!-- <p>Verificar</p> -->
+
+    <div id="res"></div>
+    
+    <script>
+        var txt = document.getElementById('txtpais')
+        var r = document.getElementById("res")
+        // var ver = document.querySelector('p')
+        // ver.document.addEventListener(onclick, verificar)
+
+        function verificar() {   
+            if (txt.value != 'brasil') {
+                r.innerHTML = `Você é estrangeiro!`
+            } else  {
+                r.innerHTML = 'Você é: Brasileiro(a).'
+            }
+        }
+    </script>
+    
+</body>
+</html>
